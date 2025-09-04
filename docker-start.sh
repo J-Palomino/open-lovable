@@ -31,7 +31,7 @@ if [ ! -f .env ]; then
 fi
 
 # Check if required environment variables are set
-if ! grep -q "^E2B_API_KEY=.\+" .env || ! grep -q "^FIRECRAWL_API_KEY=.\+" .env; then
+if ! grep -q "^E2B_API_KEY=.*" .env || ! grep -q "^FIRECRAWL_API_KEY=.*" .env; then
     echo "⚠️  Warning: Required API keys not found in .env file"
     echo "   Please make sure E2B_API_KEY and FIRECRAWL_API_KEY are set"
 fi
